@@ -5,6 +5,7 @@ import dog from '../apis/dog';
 class App extends React.Component {
     state = { pics: [] };
 
+
     onTermSubmit = async term => {
      const response = await dog.get(`/breed/${term}/images`)
 
