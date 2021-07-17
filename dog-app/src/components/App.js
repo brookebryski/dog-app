@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 import dog from '../apis/dog';
+import BreedList from './BreedList'
 
 class App extends React.Component {
     state = { pics: [] };
@@ -17,7 +18,7 @@ class App extends React.Component {
         return (
         <div className="ui container">
         <SearchBar onFormSubmit={this.onTermSubmit} />
-        I have {this.state.pics.length} pictures.
+        <BreedList pics={this.state.pics}/>
         </div>
         );
     }
