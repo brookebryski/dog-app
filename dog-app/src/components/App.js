@@ -4,9 +4,22 @@ import dog from '../apis/dog';
 import BreedList from './BreedList'
 
 class App extends React.Component {
-    state = { pics: [] };
+    state = { 
+        pics: []   
+     };
 
-
+ /*componentDidMount() {
+ fetch('https://dog.ceo/api/breeds/list/all')
+  .then(res => {
+    return res.json();
+  })
+  .then(data => {
+    const breedsObject = data.message;
+    const breedsArray = Object.keys(breedsObject);
+    console.log(breedsArray)
+    })
+}
+*/
     onTermSubmit = async term => {
      const response = await dog.get(`/breed/${term}/images`)
 
